@@ -1,0 +1,21 @@
+@use "./sass/base/base.scss";
+
+.open-button {
+	padding: 20px;
+
+	border: 1px solid #cba6f7;
+	color: #cba6f7;
+	background-color: #0a000c;
+
+	&:hover {
+		background-color: #1f1626;
+	}
+}
+
+.timer {
+	font-family: monospace;
+    font-size: 18px;
+	padding: 20px;
+	border: 1px solid #cba6f7;
+    width: fit-content;
+}
