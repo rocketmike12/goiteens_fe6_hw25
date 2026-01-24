@@ -1,25 +1,12 @@
-:root {
-	font-family: Montserrat;
-	font-weight: 400;
+@import "../base/reset.scss";
+@import "../../sass/utils/mixins.scss";
+@import "../../sass/utils/variables.scss";
 
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-
-	color: #cba6f7;
+* {
+    transition: 200ms;
+    transition-property: transform;
 }
 
 body {
-	margin: 0;
-	padding: 50px;
-	min-height: 100vh;
-	background-color: #0a000c;
-}
-
-ul {
-	list-style: none;
-}
-
-button {
-	border: none;
-	outline: none;
+    font-family: Montserrat;
 }

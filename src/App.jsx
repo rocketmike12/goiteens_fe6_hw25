@@ -1,19 +1,19 @@
 import { Routes, Route } from "react-router-dom";
-import { Home } from "./components/Home/Home";
-import { Movies } from "./components/Movies/Movies";
-import { MovieDetails } from "./components/MovieDetails/MovieDetails";
-import { Cast } from "./components/Cast/Cast";
-import { Reviews } from "./components/Reviews/Reviews";
+import { HomePage } from "./pages/HomePage/HomePage";
+import { MoviesPage } from "./pages/MoviesPage/MoviesPage.jsx";
+import { MovieDetailsPage } from "./pages/MovieDetailsPage/MovieDetailsPage.jsx";
+import { CastPage } from "./pages/CastPage/CastPage.jsx";
+import { ReviewsPage } from "./pages/ReviewsPage/ReviewsPage.jsx";
 
 export const App = function () {
 	return (
 		<>
 			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/movies" element={<Movies />} />
-				<Route path="/movies/:movieId" element={<MovieDetails />} />
-				<Route path="/movies/:movieId/cast" element={<Cast />} />
-				<Route path="/movies/:movieId/reviews" element={<Reviews />} />
+				<Route path="/" element={<HomePage />} />
+				<Route path="/movies" element={<MoviesPage />} />
+				<Route path="/movies/:movieId" element={<MovieDetailsPage />} />
+				<Route path="/movies/:movieId/cast" element={<CastPage />} />
+				<Route path="/movies/:movieId/reviews" element={<ReviewsPage />} />
 			</Routes>
 		</>
 	);
