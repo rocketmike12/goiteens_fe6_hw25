@@ -5,7 +5,9 @@ export const MovieDetailsPage = function () {
 	return (
 		<>
 			<Header />
-			<p>MovieDetails</p>
+			<Container>
+				<p>MovieDetails</p>
+			</Container>
 		</>
 	);
 };
