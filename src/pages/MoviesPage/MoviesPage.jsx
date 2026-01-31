@@ -45,7 +45,7 @@ export const MoviesPage = function () {
 				</form>
 				<ul>
 					{movies.map((movie, id) => (
-						<MovieCard key={id} title={movie.title} overview={movie.overview} poster={movie.poster_path} />
+						<MovieCard key={movie.id} title={movie.title} overview={movie.overview} poster={movie.poster_path} movieId={movie.id} />
 					))}
 				</ul>
 			</Container>

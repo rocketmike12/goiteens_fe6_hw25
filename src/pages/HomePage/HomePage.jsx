@@ -30,8 +30,8 @@ export const HomePage = function () {
 			<Container>
 				<h1>TRENDING MOVIES</h1>
 				<ul>
-					{movies.map((movie, id) => (
-						<MovieCard key={id} title={movie.title} overview={movie.overview} poster={movie.poster_path} />
+					{movies.map((movie) => (
+						<MovieCard key={movie.id} title={movie.title} overview={movie.overview} poster={movie.poster_path} movieId={movie.id} />
 					))}
 				</ul>
 			</Container>
