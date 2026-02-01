@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 
 import { tmdbApi } from "../../apis/tmdbApi";
 
+import { Link } from "react-router-dom";
+
 import { Cast } from "./Cast/Cast.jsx";
 import { Reviews } from "./Reviews/Reviews.jsx";
 
@@ -35,7 +37,9 @@ export const MovieDetailsPage = function ({ cast, reviews }) {
 					<h1>{movieData.title}</h1>
 					<img src={`https://image.tmdb.org/t/p/w500/${movieData.poster_path}`} alt={`poster for ${movieData.title}`} />
 					<p>{movieData.overview}</p>
-					<p>{JSON.stringify(movieData)}</p>
+
+					<Link to={`/movies/${params.movieId}/cast`}>Cast</Link>
+					<Link to={`/movies/${params.movieId}/reviews`}>Reviews</Link>
 				</Container>
 			</section>
 
