@@ -3,10 +3,13 @@ import { useParams } from "react-router-dom";
 
 import { tmdbApi } from "../../apis/tmdbApi";
 
+import { Cast } from "./Cast/Cast.jsx";
+import { Reviews } from "./Reviews/Reviews.jsx";
+
 import { Container } from "../../components/Container/Container";
 import { Header } from "../../components/Header/Header";
 
-export const MovieDetailsPage = function () {
+export const MovieDetailsPage = function ({ cast, reviews }) {
 	const params = useParams();
 
 	const [movieData, setMovieData] = useState({});
@@ -35,6 +38,10 @@ export const MovieDetailsPage = function () {
 					<p>{JSON.stringify(movieData)}</p>
 				</Container>
 			</section>
+
+			{cast && <Cast />}
+
+			{reviews && <Reviews />}
 		</>
 	);
 };
