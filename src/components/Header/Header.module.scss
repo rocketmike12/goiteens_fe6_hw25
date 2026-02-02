@@ -1,9 +1,12 @@
 @import "../../sass/base/base.scss";
 
 .header {
-	& > div {
-		padding: 20px 0;
-	}
+	padding: 20px 0;
+
+	position: sticky;
+	top: 0;
+
+	background-color: $bg;
 
 	&__nav {
 		display: flex;
@@ -11,7 +14,7 @@
 		gap: 50px;
 
 		&__link {
-			@include typography(inherit, 600, 32px, _);
+			@include typography(inherit, 600, 24px, _);
 
 			text-decoration: none;
 
