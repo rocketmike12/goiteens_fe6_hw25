@@ -7,6 +7,8 @@ import { Header } from "../../components/Header/Header.jsx";
 
 import { MovieCard } from "../../components/MovieCard/MovieCard.jsx";
 
+import styles from "./HomePage.module.scss";
+
 export const HomePage = function () {
 	const [movies, setMovies] = useState([]);
 
@@ -27,14 +29,16 @@ export const HomePage = function () {
 	return (
 		<>
 			<Header />
-			<Container>
-				<h1>TRENDING MOVIES</h1>
-				<ul>
-					{movies.map((movie) => (
-						<MovieCard key={movie.id} title={movie.title} overview={movie.overview} poster={movie.poster_path} movieId={movie.id} />
-					))}
-				</ul>
-			</Container>
+			<section className={styles["home"]}>
+				<Container>
+					<h1 className={styles["home__title"]}>TRENDING MOVIES</h1>
+					<ul className={styles["home__list"]}>
+						{movies.map((movie) => (
+							<MovieCard key={movie.id} title={movie.title} overview={movie.overview} poster={movie.poster_path} movieId={movie.id} />
+						))}
+					</ul>
+				</Container>
+			</section>
 		</>
 	);
 };

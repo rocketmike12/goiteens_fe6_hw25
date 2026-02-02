@@ -1,0 +1,17 @@
+@import "../../sass/base/base.scss";
+
+.home {
+	padding-top: 32px;
+
+	&__title {
+		@include typography(inherit, 600, 48px, _);
+
+		margin-bottom: 32px;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+}
