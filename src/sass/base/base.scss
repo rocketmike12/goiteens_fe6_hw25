@@ -3,10 +3,21 @@
 @import "../../sass/utils/variables.scss";
 
 * {
-    transition: 200ms;
-    transition-property: transform;
+	transition: 200ms;
+	transition-property: transform;
 }
 
 body {
-    font-family: Montserrat;
+	font-family: Montserrat;
+
+	background-color: $bg;
+	color: $fg-alt;
+}
+
+a {
+	color: $accent;
+
+	&:visited {
+		color: $accent-alt;
+	}
 }
