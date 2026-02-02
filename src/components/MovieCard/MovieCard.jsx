@@ -6,10 +6,10 @@ export const MovieCard = function ({ title, overview, poster, movieId }) {
 	return (
 		<>
 			<li className={styles["movie-card"]}>
-				<Link to={`/movies/${movieId}`}>
+				<Link to={`/movies/${movieId}`} className={styles["movie-card__link"]}>
 					<img className={styles["movie-card__poster"]} src={`https://image.tmdb.org/t/p/w500/${poster}`} alt={`poster for ${title}`} />
-					<h2 className={styles["movie-card__title"]}>{title}</h2>
-					<p className={styles["movie-card__overview"]}>{overview}</p>
+					<h3 className={styles["movie-card__title"]}>{title}</h3>
+					<p className={styles["movie-card__overview"]}>{overview.slice(0, 128) + "..."}</p>
 				</Link>
 			</li>
 		</>

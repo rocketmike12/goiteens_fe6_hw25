@@ -1,0 +1,28 @@
+@import "../../sass/base/base.scss";
+
+.movie-card {
+	width: 400px;
+    height: 100%;
+
+	&__link {
+		display: flex;
+		justify-content: space-between;
+        gap: 16px;
+        flex-direction: column;
+
+		text-decoration: none;
+	}
+
+	&__poster {
+		width: 100%;
+		height: auto;
+	}
+
+	&__title {
+		color: $fg-alt;
+	}
+
+	&__overview {
+		color: $fg;
+	}
+}
