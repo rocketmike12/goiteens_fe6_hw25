@@ -1,0 +1,29 @@
+@import "../../sass/base/base.scss";
+
+.header {
+	& > div {
+		padding: 20px 0;
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		gap: 50px;
+
+		&__link {
+			@include typography(inherit, 600, 32px, _);
+
+			text-decoration: none;
+
+			color: $fg-alt;
+
+			&:visited {
+				color: $fg;
+			}
+
+			&.active {
+				box-shadow: 0 2px 0 $fg;
+			}
+		}
+	}
+}

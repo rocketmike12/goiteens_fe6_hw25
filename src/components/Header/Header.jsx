@@ -7,13 +7,13 @@ import styles from "./Header.module.scss";
 export const Header = function () {
 	return (
 		<>
-			<header className="header">
+			<header className={styles["header"]}>
 				<Container>
-					<nav>
-						<NavLink className={({ isActive }) => (isActive ? `${styles.nav__link} ${styles.active}` : styles.nav__link)} to="/">
+					<nav className={styles["header__nav"]}>
+						<NavLink className={({ isActive }) => (isActive ? `${styles["header__nav__link"]} ${styles["active"]}` : styles["header__nav__link"])} to="/">
 							HOME
 						</NavLink>
-						<NavLink className={({ isActive }) => (isActive ? `${styles.nav__link} ${styles.active}` : styles.nav__link)} to="/movies">
+						<NavLink className={({ isActive }) => (isActive ? `${styles["header__nav__link"]} ${styles["active"]}` : styles["header__nav__link"])} to="/movies">
 							SEARCH MOVIES
 						</NavLink>
 					</nav>
