@@ -1,14 +1,14 @@
 @import "../../sass/base/base.scss";
 
 .movie-card {
-	width: 400px;
-    height: 100%;
+	width: 295px;
+	height: 100%;
 
 	&__link {
 		display: flex;
 		justify-content: space-between;
-        gap: 16px;
-        flex-direction: column;
+		gap: 16px;
+		flex-direction: column;
 
 		text-decoration: none;
 	}
@@ -19,10 +19,14 @@
 	}
 
 	&__title {
+		@include typography(inherit, 700, 20px, _);
+
 		color: $fg-alt;
 	}
 
 	&__overview {
+		@include typography(inherit, 400, 16px, _);
+
 		color: $fg;
 	}
 }
