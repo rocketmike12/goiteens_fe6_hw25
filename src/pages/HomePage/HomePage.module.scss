@@ -1,7 +1,7 @@
 @import "../../sass/base/base.scss";
 
 .home {
-	padding-top: 32px;
+	padding: 32px 0;
 
 	&__title {
 		@include typography(inherit, 600, 48px, _);

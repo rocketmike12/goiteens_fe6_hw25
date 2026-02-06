@@ -5,6 +5,8 @@ import { tmdbApi } from "../../../apis/tmdbApi";
 
 import { Container } from "../../../components/Container/Container";
 
+import styles from "./Cast.module.scss";
+
 export const Cast = function () {
 	const params = useParams();
 
@@ -25,14 +27,14 @@ export const Cast = function () {
 
 	return (
 		<>
-			<section>
+			<section className={styles["cast"]}>
 				<Container>
-					<ul>
+					<ul className={styles["cast__list"]}>
 						{cast.map((el) => (
-							<li>
-								<img src={`https://image.tmdb.org/t/p/w500/${el.profile_path}`} alt="" />
-								<p>
-									{el.name} - {el.character}
+							<li className={styles["cast__list__item"]}>
+								<img src={`https://image.tmdb.org/t/p/w500/${el.profile_path}`} alt="" className={styles["cast__list__img"]} />
+								<p className={styles["cast__list__text"]}>
+									<span className={styles["cast__list__text__actor"]}>{el.name}</span> - <span className={styles["cast__list__text__character"]}>{el.character}</span>
 								</p>
 							</li>
 						))}

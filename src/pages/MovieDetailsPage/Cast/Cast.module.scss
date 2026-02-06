@@ -1,0 +1,41 @@
+@import "../../../sass/base/base.scss";
+
+.cast {
+    padding: 32px 0;
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+
+		&__item {
+			width: 295px;
+			height: 100%;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+            gap: 16px;
+		}
+
+		&__img {
+			width: 100%;
+			height: auto;
+		}
+
+		&__text {
+			@include typography(inherit, _, _, center);
+
+			&__actor {
+				@include typography(inherit, 500, 18px, _);
+
+				color: $fg-alt;
+			}
+
+			&__character {
+				@include typography(inherit, 400, 18px, _);
+
+				color: $fg;
+			}
+		}
+	}
+}

@@ -5,6 +5,8 @@ import { tmdbApi } from "../../../apis/tmdbApi";
 
 import { Container } from "../../../components/Container/Container";
 
+import styles from "./Reviews.module.scss";
+
 export const Reviews = function () {
 	const params = useParams();
 
@@ -25,13 +27,13 @@ export const Reviews = function () {
 
 	return (
 		<>
-			<section>
+			<section className={styles["reviews"]}>
 				<Container>
-					<ul>
+					<ul className={styles["reviews__list"]}>
 						{reviews.map((el) => (
-							<li>
-								<p>{el.author}</p>
-								<p>{el.content}</p>
+							<li className={styles["reviews__list__item"]}>
+								<p className={styles["reviews__list__item__author"]}>{el.author}</p>
+								<p className={styles["reviews__list__item__content"]}>{el.content}</p>
 							</li>
 						))}
 					</ul>

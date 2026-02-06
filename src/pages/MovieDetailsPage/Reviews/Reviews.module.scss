@@ -1,0 +1,18 @@
+@import "../../../sass/base/base.scss";
+
+.reviews {
+	&__list {
+		&__item {
+			&__author {
+				@include typography(inherit, 500, 32px, _);
+				margin-bottom: 10px;
+			}
+
+			&__content {
+				@include typography(inherit, 400, 18px, _);
+			}
+
+			margin-bottom: 32px;
+		}
+	}
+}

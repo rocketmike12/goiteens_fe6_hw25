@@ -1,6 +1,8 @@
 @import "../../sass/base/base.scss";
 
 .movie-details {
+	padding: 32px 0;
+
 	& > div {
 		display: flex;
 		justify-content: center;
