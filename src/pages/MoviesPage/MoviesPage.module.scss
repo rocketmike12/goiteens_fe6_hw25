@@ -1,0 +1,85 @@
+@import "../../sass/base/base.scss";
+
+.movies {
+	padding-top: 32px;
+
+	&__title {
+		@include typography(inherit, 600, 48px, _);
+
+		margin-bottom: 32px;
+	}
+
+	&__form {
+		width: 600px;
+		height: 48px;
+
+		margin: 32px 0;
+
+		display: flex;
+		align-items: center;
+
+		&__input {
+			width: 552px;
+			height: 100%;
+
+			border: 2px solid $fg;
+			border-right: none;
+
+			background-color: $bg;
+			color: $fg-alt;
+
+			padding: 16px;
+
+			@include typography(inherit, 400, 20px, _);
+
+			&::placeholder {
+				@include typography(inherit, 300, 20px, _);
+
+				color: $fg;
+			}
+
+			&:hover,
+			&:focus {
+				background-color: $bg-alt;
+				border-color: $fg-alt;
+			}
+		}
+
+		&__button {
+			width: 48px;
+			height: 100%;
+
+			background-color: $bg;
+			color: $fg;
+
+			border: 2px solid $fg;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			& > svg {
+				width: 24px;
+				height: 24px;
+				fill: $fg;
+			}
+
+			&:hover {
+				background-color: $bg-alt;
+				border-color: $fg-alt;
+
+				& > svg {
+					width: 24px;
+					height: 24px;
+					fill: $fg-alt;
+				}
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+}

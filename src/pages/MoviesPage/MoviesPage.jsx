@@ -9,6 +9,10 @@ import { Header } from "../../components/Header/Header";
 
 import { MovieCard } from "../../components/MovieCard/MovieCard";
 
+import { IoSearch } from "react-icons/io5";
+
+import styles from "./MoviesPage.module.scss";
+
 export const MoviesPage = function () {
 	const [movies, setMovies] = useState([]);
 
@@ -37,18 +41,20 @@ export const MoviesPage = function () {
 	return (
 		<>
 			<Header />
-			<Container>
-				<h1>SEARCH MOVIES</h1>
-				<form onSubmit={handleSearch}>
-					<input type="text" name="query" placeholder="search movies" />
-					<button type="submit">search</button>
-				</form>
-				<ul>
-					{movies.map((movie, id) => (
-						<MovieCard key={movie.id} title={movie.title} overview={movie.overview} poster={movie.poster_path} movieId={movie.id} />
-					))}
-				</ul>
-			</Container>
+
+			<section className={styles["movies"]}>
+				<Container>
+					<form onSubmit={handleSearch} className={styles["movies__form"]}>
+						<input type="text" name="query" placeholder="search movies" className={styles["movies__form__input"]} />
+						<button type="submit" className={styles["movies__form__button"]}><IoSearch/></button>
+					</form>
+					<ul className={styles["movies__list"]}>
+						{movies.map((movie, id) => (
+							<MovieCard key={movie.id} title={movie.title} overview={movie.overview} poster={movie.poster_path} movieId={movie.id} />
+						))}
+					</ul>
+				</Container>
+			</section>
 		</>
 	);
 };
